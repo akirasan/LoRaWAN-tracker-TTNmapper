@@ -7,11 +7,11 @@
    Parte del código es grácias al ejemplo del envío de un paquete "Hello, world!"
   por LoRaWAN utilizando autenticación ABP, realizado por:
      Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
-*/
+*******************************************************************************/
 
 #define GPS_ON        // GPS conectado. Si no está definido se envían datos nulos. Para uso con TTNMAPPER App móvil
 #define DEBUG_ON      // Info por Serial
-#define MODO_TEST     // Usa solo canal 0 ---- SOLO TEST
+#define MODO_TEST     // Usa utiliza el canal 0 para transmitir ---- SOLO TEST
 #define BAUD_SERIAL 115200
 
 
@@ -43,15 +43,15 @@ MicroNMEA nmea(nmeaBuffer, sizeof(nmeaBuffer));
 // LoRaWAN NwkSKey, network session key
 // This is the default Semtech key, which is used by the early prototype TTN
 // network.
-static const PROGMEM u1_t NWKSKEY[16] = { 0x95, 0x5A, 0xE4, 0x3E, 0x75, 0x9C, 0xD3, 0xAA, 0xDF, 0x72, 0x9D, 0x29, 0xDF, 0x29, 0xF1, 0x4F};
+static const PROGMEM u1_t NWKSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 // LoRaWAN AppSKey, application session key
 // This is the default Semtech key, which is used by the early prototype TTN
 // network.
-static const u1_t PROGMEM APPSKEY[16] = { 0x53, 0x61, 0x36, 0x77, 0xC8, 0x1A, 0x9D, 0x3F, 0xED, 0x9E, 0xC3, 0xC2, 0xCE, 0xE0, 0xF4, 0x66 };
+static const u1_t PROGMEM APPSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 // LoRaWAN end-device address (DevAddr)
-static const u4_t DEVADDR = 0x260117BA ; // <-- Change this address for every node!
+static const u4_t DEVADDR = 0x0000000; // <-- Change this address for every node!
 //**************************************
 
 
@@ -68,7 +68,7 @@ static uint8_t payload[13];
 static osjob_t sendjob;
 
 // Planificacion del envio de paquetes LoRa. El intervalo es en segundos
-const unsigned TX_INTERVAL = 30;
+const unsigned TX_INTERVAL = 60;
 
 
 // Pin mapping
@@ -209,6 +209,7 @@ void enviar_datos_GPS(osjob_t* j) {
       // ----- MicroNMEA devuelve la info sin decimales
       // por lo tanto nos ahorramos el siguiente paso de pasarlo a entero
       // multiplicando por 10000000
+      // Dejo el código comentado por si alguien lo necesita
       //----------------------------
       //float latitude = nmea.getLatitude();
       //float longitude = nmea.getLongitude();
@@ -218,7 +219,6 @@ void enviar_datos_GPS(osjob_t* j) {
       // GPS --- Latitud + Longitud
       latitude_long = nmea.getLatitude();
       longitude_long = nmea.getLongitude();
-
 
       // GPS --- Altitud
       altitude = 0;
@@ -418,6 +418,7 @@ void inicializar_LoRa() {
 void setup() {
   Serial.begin(BAUD_SERIAL);
   Serial.println(F("Starting"));
+
 #ifdef GPS_ON
   gps.begin(BAUD_GPS);        // gps
 #endif GPS_ON
