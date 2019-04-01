@@ -1,0 +1,582 @@
+EESchema Schematic File Version 4
+LIBS:lora_node_rfm95_minipro-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L lora_node_rfm95_minipro-rescue:ARD-PRO-MINI-5-ARD-PRO-MINI-5 IC1
+U 1 1 5B0D4956
+P 2600 3300
+F 0 "IC1" H 3150 3565 50  0000 C CNN
+F 1 "ARD-PRO-MINI-5" H 3150 3474 50  0000 C CNN
+F 2 "lora_node_rfm95_minipro:ARDPROMINI5_SMD" H 3550 3400 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardProMini" H 3550 3300 50  0001 L CNN
+F 4 "Development Boards & Kits - AVR PRO MINI (ARDUINO) 5V/16MHZ" H 3550 3200 50  0001 L CNN "Description"
+F 5 "3" H 3550 3100 50  0001 L CNN "Height"
+F 6 "992-ARD-PRO-MINI-5" H 3550 3000 50  0001 L CNN "Mouser Part Number"
+F 7 "Gravitech" H 3550 2900 50  0001 L CNN "Manufacturer_Name"
+F 8 "ARD-PRO-MINI-5" H 3550 2800 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2600 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L lora_node_rfm95_minipro-rescue:RFM95W-868S2-RFM95W-868S2 U1
+U 1 1 5B0D4B2A
+P 6100 4350
+F 0 "U1" H 6100 5017 50  0000 C CNN
+F 1 "RFM95W-868S2" H 6100 4926 50  0000 C CNN
+F 2 "lora_node_rfm95_minipro:XCVR_RFM95W-868S2" H 6100 4350 50  0001 L BNN
+F 3 "RF" H 6100 4350 50  0001 L BNN
+F 4 "7.02 USD" H 6100 4350 50  0001 L BNN "Field4"
+F 5 "Warning" H 6100 4350 50  0001 L BNN "Field5"
+F 6 "RFM95W-868S2" H 6100 4350 50  0001 L BNN "Field7"
+F 7 "SMD-16 Hope Microelectronics" H 6100 4350 50  0001 L BNN "Field8"
+	1    6100 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5BC5DE8B
+P 6450 1200
+F 0 "J1" H 6370 875 50  0000 C CNN
+F 1 "Conn_BAT" H 6370 966 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical" H 6450 1200 50  0001 C CNN
+F 3 "~" H 6450 1200 50  0001 C CNN
+	1    6450 1200
+	-1   0    0    1   
+$EndComp
+Text GLabel 5725 1525 2    50   Input ~ 0
+GND
+Text GLabel 6900 1100 2    50   Input ~ 0
+VBAT
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5BC5E26C
+P 7860 1490
+F 0 "SW1" H 7860 1775 50  0000 C CNN
+F 1 "SW_SPDT" H 7860 1684 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_PCM12" H 7860 1490 50  0001 C CNN
+F 3 "" H 7860 1490 50  0001 C CNN
+	1    7860 1490
+	1    0    0    -1  
+$EndComp
+Text GLabel 7510 1490 0    50   Input ~ 0
+VBAT
+Text GLabel 8060 1390 2    50   Output ~ 0
+VBAT_SW
+NoConn ~ 8060 1590
+Text GLabel 8600 2000 1    50   Input ~ 0
+VBAT_SW
+$Comp
+L Device:D_Schottky_ALT D1
+U 1 1 5BC5E69B
+P 8600 2350
+F 0 "D1" V 8646 2271 50  0000 R CNN
+F 1 "D_Schottky_ALT" V 8555 2271 50  0000 R CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.22x1.80mm_HandSolder" H 8600 2350 50  0001 C CNN
+F 3 "~" H 8600 2350 50  0001 C CNN
+	1    8600 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5BC5E9DD
+P 8600 2950
+F 0 "C1" H 8715 2996 50  0000 L CNN
+F 1 "100nF" H 8715 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.29x1.40mm_HandSolder" H 8638 2800 50  0001 C CNN
+F 3 "~" H 8600 2950 50  0001 C CNN
+	1    8600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5BC5EC04
+P 10800 3300
+F 0 "C3" H 10915 3346 50  0000 L CNN
+F 1 "47uF" H 10915 3255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.29x1.40mm_HandSolder" H 10838 3150 50  0001 C CNN
+F 3 "~" H 10800 3300 50  0001 C CNN
+	1    10800 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 10850 2450 1    50   Output ~ 0
++3,3V
+Text GLabel 3850 4900 2    50   Input ~ 0
+GND
+Wire Wire Line
+	3850 4900 3700 4900
+Text GLabel 7050 4650 2    50   Input ~ 0
+GND
+Text GLabel 7050 3950 2    50   Input ~ 0
++3,3V
+Wire Wire Line
+	6800 3950 7050 3950
+Wire Wire Line
+	6800 4650 7050 4650
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5BC727DA
+P 6450 1750
+F 0 "J2" H 6370 1425 50  0000 C CNN
+F 1 "Conn_ANT" H 6370 1516 50  0000 C CNN
+F 2 "lora_node_rfm95_minipro:SMA_Molex_73251-1153_EdgeMount_Horizontal" H 6450 1750 50  0001 C CNN
+F 3 "~" H 6450 1750 50  0001 C CNN
+	1    6450 1750
+	-1   0    0    1   
+$EndComp
+Text GLabel 7050 4150 2    50   Input ~ 0
+ANT
+Wire Wire Line
+	6800 4150 7050 4150
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5BC7363F
+P 7100 2500
+F 0 "J3" H 7020 2075 50  0000 C CNN
+F 1 "Conn_GPS" H 7020 2166 50  0000 C CNN
+F 2 "lora_node_rfm95_minipro:GPS_module_SMD" H 7100 2500 50  0001 C CNN
+F 3 "~" H 7100 2500 50  0001 C CNN
+	1    7100 2500
+	-1   0    0    1   
+$EndComp
+Text GLabel 7300 2600 2    50   Input ~ 0
+GND
+Text GLabel 7300 2500 2    50   Input ~ 0
+RX_GPS
+Text GLabel 7300 2400 2    50   Input ~ 0
+TX_GPS
+Text GLabel 6650 1650 2    50   Input ~ 0
+GND
+Text GLabel 6650 1750 2    50   Input ~ 0
+ANT
+Text GLabel 2450 3800 0    50   Input ~ 0
+RX_GPS
+Text GLabel 2450 3700 0    50   Input ~ 0
+TX_GPS
+Wire Wire Line
+	2450 3800 2600 3800
+Wire Wire Line
+	2450 3900 2600 3900
+Wire Wire Line
+	2600 4000 1850 4000
+Wire Wire Line
+	1850 4000 1850 5250
+Wire Wire Line
+	1850 5250 5050 5250
+Wire Wire Line
+	5050 5250 5050 4650
+Wire Wire Line
+	5050 4650 5400 4650
+Wire Wire Line
+	5400 4750 5100 4750
+Wire Wire Line
+	5100 4750 5100 5300
+Wire Wire Line
+	5100 5300 1800 5300
+Wire Wire Line
+	1800 5300 1800 3600
+Wire Wire Line
+	1800 3600 2600 3600
+Wire Wire Line
+	5400 4850 5150 4850
+Wire Wire Line
+	5150 4850 5150 5350
+Wire Wire Line
+	5150 5350 1750 5350
+Wire Wire Line
+	1750 5350 1750 3500
+Wire Wire Line
+	1750 3500 2600 3500
+Wire Wire Line
+	5400 4250 5050 4250
+Wire Wire Line
+	5050 4250 5050 2900
+Wire Wire Line
+	5050 2900 1750 2900
+Wire Wire Line
+	1750 2900 1750 3300
+Wire Wire Line
+	1750 3300 2600 3300
+Wire Wire Line
+	5400 4150 3950 4150
+Wire Wire Line
+	3950 4150 3950 3900
+Wire Wire Line
+	3950 3900 3700 3900
+Text GLabel 3700 3600 2    50   Input ~ 0
+D13
+Text GLabel 7050 4450 2    50   Input ~ 0
+D11
+Text GLabel 5400 3950 0    50   Input ~ 0
+D12
+Text GLabel 5400 4050 0    50   Input ~ 0
+D13
+Text GLabel 3700 3800 2    50   Input ~ 0
+D11
+Text GLabel 3700 3700 2    50   Input ~ 0
+D12
+Wire Wire Line
+	7050 4450 6800 4450
+$Comp
+L LED:WS2812B LED2
+U 1 1 5BC88EEE
+P 3500 1850
+F 0 "LED2" H 3841 1896 50  0000 L CNN
+F 1 "WS2812B" H 3841 1805 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3550 1550 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3600 1475 50  0001 L TNN
+	1    3500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B LED3
+U 1 1 5BC88F4E
+P 4750 1850
+F 0 "LED3" H 5091 1896 50  0000 L CNN
+F 1 "WS2812B" H 5091 1805 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 4800 1550 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4850 1475 50  0001 L TNN
+	1    4750 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 3400 0    50   Input ~ 0
+NEOPIXELS
+Wire Wire Line
+	2450 3700 2600 3700
+Text GLabel 1750 1850 0    50   Input ~ 0
+NEOPIXELS
+Wire Wire Line
+	1750 1850 1900 1850
+Wire Wire Line
+	2500 1850 3200 1850
+Wire Wire Line
+	3800 1850 4450 1850
+NoConn ~ 5050 1850
+NoConn ~ 6800 4750
+NoConn ~ 6800 4850
+NoConn ~ 5400 4550
+NoConn ~ 5400 4450
+NoConn ~ 5400 4350
+NoConn ~ 3700 4800
+NoConn ~ 3700 4700
+NoConn ~ 3700 4600
+NoConn ~ 3700 4500
+NoConn ~ 3700 4400
+NoConn ~ 3700 4300
+NoConn ~ 3700 4200
+NoConn ~ 3700 4100
+NoConn ~ 3700 4000
+NoConn ~ 2600 4100
+NoConn ~ 2600 4200
+NoConn ~ 2600 4300
+NoConn ~ 2600 4400
+NoConn ~ 2600 4600
+NoConn ~ 2600 4700
+NoConn ~ 2600 4900
+NoConn ~ 3700 3300
+NoConn ~ 3700 3400
+NoConn ~ 3700 3500
+Wire Wire Line
+	1900 1450 1900 1250
+Wire Wire Line
+	3500 1550 3500 1450
+Wire Wire Line
+	3500 1450 2200 1450
+Wire Wire Line
+	2200 1550 2200 1450
+Connection ~ 2200 1450
+Wire Wire Line
+	2200 1450 1900 1450
+Wire Wire Line
+	7510 1490 7660 1490
+Wire Wire Line
+	6650 1200 6900 1200
+Text GLabel 6900 1200 2    50   Input ~ 0
+GND
+Wire Wire Line
+	6650 1100 6900 1100
+Text GLabel 5725 1075 2    50   Input ~ 0
+VBAT
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5BDED5E9
+P 5400 1075
+F 0 "#FLG0101" H 5400 1150 50  0001 C CNN
+F 1 "PWR_FLAG" H 5425 1300 50  0000 C CNN
+F 2 "" H 5400 1075 50  0001 C CNN
+F 3 "~" H 5400 1075 50  0001 C CNN
+	1    5400 1075
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5BDF1C9C
+P 5550 1300
+F 0 "BT1" H 5700 1350 50  0000 L CNN
+F 1 "Battery" H 5700 1300 50  0000 L CNN
+F 2 "" V 5550 1360 50  0001 C CNN
+F 3 "~" V 5550 1360 50  0001 C CNN
+	1    5550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1075 5550 1075
+Wire Wire Line
+	5550 1100 5550 1075
+Connection ~ 5550 1075
+Wire Wire Line
+	5550 1075 5725 1075
+Wire Wire Line
+	5550 1500 5550 1525
+Wire Wire Line
+	5550 1525 5725 1525
+$Comp
+L power:GND #PWR0101
+U 1 1 5BE12DEB
+P 5400 1525
+F 0 "#PWR0101" H 5400 1275 50  0001 C CNN
+F 1 "GND" V 5400 1350 50  0000 R CNN
+F 2 "" H 5400 1525 50  0001 C CNN
+F 3 "" H 5400 1525 50  0001 C CNN
+	1    5400 1525
+	0    1    1    0   
+$EndComp
+Connection ~ 5550 1525
+Wire Wire Line
+	5550 1525 5400 1525
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5BDF444A
+P 7500 2150
+F 0 "#PWR0104" H 7500 2000 50  0001 C CNN
+F 1 "+3.3V" H 7550 2350 50  0000 C CNN
+F 2 "" H 7500 2150 50  0001 C CNN
+F 3 "" H 7500 2150 50  0001 C CNN
+	1    7500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BDF61B9
+P 9150 3550
+F 0 "#PWR0102" H 9150 3300 50  0001 C CNN
+F 1 "GND" H 9200 3325 50  0000 C CNN
+F 2 "" H 9150 3550 50  0001 C CNN
+F 3 "" H 9150 3550 50  0001 C CNN
+	1    9150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5BDF7BE1
+P 2200 2250
+F 0 "#PWR0107" H 2200 2000 50  0001 C CNN
+F 1 "GND" H 2250 2050 50  0000 C CNN
+F 2 "" H 2200 2250 50  0001 C CNN
+F 3 "" H 2200 2250 50  0001 C CNN
+	1    2200 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2250 2200 2150
+$Comp
+L LED:WS2812B LED1
+U 1 1 5BC88E06
+P 2200 1850
+F 0 "LED1" H 2541 1896 50  0000 L CNN
+F 1 "WS2812B" H 2541 1805 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 2250 1550 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2300 1475 50  0001 L TNN
+	1    2200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5BDFCBB2
+P 3500 2250
+F 0 "#PWR0108" H 3500 2000 50  0001 C CNN
+F 1 "GND" H 3550 2050 50  0000 C CNN
+F 2 "" H 3500 2250 50  0001 C CNN
+F 3 "" H 3500 2250 50  0001 C CNN
+	1    3500 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5BDFCC17
+P 4750 2225
+F 0 "#PWR0109" H 4750 1975 50  0001 C CNN
+F 1 "GND" H 4800 2025 50  0000 C CNN
+F 2 "" H 4750 2225 50  0001 C CNN
+F 3 "" H 4750 2225 50  0001 C CNN
+	1    4750 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2250 3500 2150
+Wire Wire Line
+	4750 2250 4750 2225
+Connection ~ 4750 2225
+Wire Wire Line
+	4750 2225 4750 2150
+Wire Wire Line
+	4750 1556 4752 1556
+Wire Wire Line
+	4752 1556 4752 1555
+Connection ~ 4750 1550
+Wire Wire Line
+	4750 1550 4750 1556
+Wire Wire Line
+	3500 1450 4750 1450
+Wire Wire Line
+	4750 1450 4750 1550
+Connection ~ 3500 1450
+$Comp
+L lora_node_rfm95_minipro-rescue:LMS8117AMP-3.3-LMS8117AMP-3.3 U2
+U 1 1 5BF2ED5B
+P 9850 2750
+F 0 "U2" H 9850 3150 50  0000 C CNN
+F 1 "LMS8117AMP-3.3" H 9850 3050 50  0000 C CNN
+F 2 "lora_node_rfm95_minipro:SOT230P696X180-4N" H 9850 2750 50  0001 L BNN
+F 3 "LMS8117AMP-3.3" H 9850 2750 50  0001 L BNN
+F 4 "SOT-223 Texas Instruments" H 9850 2750 50  0001 L BNN "Field4"
+F 5 "Texas Instruments" H 9850 2750 50  0001 L BNN "Field5"
+F 6 "None" H 9850 2750 50  0001 L BNN "Field6"
+F 7 "Unavailable" H 9850 2750 50  0001 L BNN "Field7"
+F 8 "IC Regulator LMS8117/SO-3.3/LMS8117AMP-3.3 NATIONAL SEMI RoHS V=3.3 SOT223" H 9850 2750 50  0001 L BNN "Field8"
+	1    9850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 2000 8600 2200
+Wire Wire Line
+	8600 2500 8600 2750
+Wire Wire Line
+	8600 2750 9150 2750
+Connection ~ 8600 2750
+Wire Wire Line
+	8600 2750 8600 2800
+Wire Wire Line
+	9150 2950 9150 3100
+Wire Wire Line
+	10800 3450 9150 3450
+Connection ~ 9150 3450
+Wire Wire Line
+	9150 3450 9150 3550
+Wire Wire Line
+	8600 3100 9150 3100
+Connection ~ 9150 3100
+Wire Wire Line
+	9150 3100 9150 3450
+Wire Wire Line
+	10550 2750 10800 2750
+Wire Wire Line
+	10850 2750 10850 2450
+Wire Wire Line
+	10800 3150 10800 2750
+Connection ~ 10800 2750
+Wire Wire Line
+	10800 2750 10850 2750
+NoConn ~ 10550 2850
+Text GLabel 7600 2300 2    50   Input ~ 0
++3,3V
+Wire Wire Line
+	7300 2300 7500 2300
+Wire Wire Line
+	7500 2150 7500 2300
+Connection ~ 7500 2300
+Wire Wire Line
+	7500 2300 7600 2300
+$Comp
+L Device:R R1
+U 1 1 5C34BB55
+P 3950 6800
+F 0 "R1" H 4050 6850 50  0000 L CNN
+F 1 "10K" H 4050 6800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 3880 6800 50  0001 C CNN
+F 3 "~" H 3950 6800 50  0001 C CNN
+	1    3950 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5C34BC32
+P 3350 6950
+F 0 "SW2" H 3350 7250 50  0000 C CNN
+F 1 "SW_Push" H 3350 7150 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 3350 7150 50  0001 C CNN
+F 3 "" H 3350 7150 50  0001 C CNN
+	1    3350 6950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 6950 2    50   Input ~ 0
+PUSHBUTTON
+Text GLabel 2450 3900 0    50   Input ~ 0
+PUSHBUTTON
+Wire Wire Line
+	2450 3400 2600 3400
+Text GLabel 3050 6950 0    50   Input ~ 0
+GND
+Text GLabel 3950 6500 1    50   Input ~ 0
++3,3V
+Wire Wire Line
+	3950 6500 3950 6650
+Wire Wire Line
+	3550 6950 3950 6950
+Connection ~ 3950 6950
+Wire Wire Line
+	3950 6950 4200 6950
+Wire Wire Line
+	3150 6950 3050 6950
+Text GLabel 1900 1250 1    50   Input ~ 0
++3,3V
+NoConn ~ 2600 4500
+Text GLabel 2450 4800 0    50   Input ~ 0
++3,3V
+Wire Wire Line
+	2450 4800 2600 4800
+Text GLabel 6000 6950 2    50   Input ~ 0
+GND
+Text GLabel 5450 6500 1    50   Input ~ 0
++3,3V
+$Comp
+L Device:R R2
+U 1 1 5C3685D1
+P 5450 6800
+F 0 "R2" H 5550 6850 50  0000 L CNN
+F 1 "1k" H 5550 6800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5380 6800 50  0001 C CNN
+F 3 "~" H 5450 6800 50  0001 C CNN
+	1    5450 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5C3687FE
+P 5750 6950
+F 0 "D2" H 5700 6650 50  0000 C CNN
+F 1 "LED" H 5700 6750 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.12x1.40mm_HandSolder" H 5750 6950 50  0001 C CNN
+F 3 "~" H 5750 6950 50  0001 C CNN
+	1    5750 6950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5450 6500 5450 6650
+Wire Wire Line
+	5450 6950 5600 6950
+Wire Wire Line
+	5900 6950 6000 6950
+$EndSCHEMATC

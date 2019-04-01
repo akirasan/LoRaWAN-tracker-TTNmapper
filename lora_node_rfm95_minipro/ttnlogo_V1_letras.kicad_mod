@@ -1,0 +1,11 @@
+(module ttnlogo_V1_letras (layer F.Cu) (tedit 5ABFFD59)
+  (descr "Imported from ttnlogo_V1_letras.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference ttn (at 0 -3.048) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value ttn (at 0 3.048) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+)

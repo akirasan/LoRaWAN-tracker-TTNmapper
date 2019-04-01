@@ -1,0 +1,11 @@
+(module LoRa_logo (layer F.Cu) (tedit 5AC00229)
+  (descr "Imported from LoRa_logo.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference lora (at 0 -3.048) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value lora (at 0 3.048) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+)

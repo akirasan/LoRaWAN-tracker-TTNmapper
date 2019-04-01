@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Antennas)(type Github)(uri "$(KIGITHUB)Antennas.pretty")(options "")(descr ""))
+  (lib (name Connectors)(type Github)(uri "$(KIGITHUB)Connectors.pretty")(options "")(descr ""))
+  (lib (name lora_node_rfm95_minipro)(type KiCad)(uri ${KIPRJMOD}/lora_node_rfm95_minipro.pretty)(options "")(descr ""))
+)

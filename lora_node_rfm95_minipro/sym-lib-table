@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name lora_ra01)(type Legacy)(uri /home/akirasan/Documentos/lora_pcb_ra01/lora_ra01/lora_ra01.lib)(options "")(descr ""))
+  (lib (name ARD-PRO-MINI-5)(type Legacy)(uri "/home/akirasan/Documentos/lora_pcb_rfm95/lora_node_rfm95_minipro/arduino mini pro/ARD-PRO-MINI-5.lib")(options "")(descr ""))
+  (lib (name RFM95W-868S2)(type Legacy)(uri /home/akirasan/Documentos/lora_pcb_rfm95/lora_node_rfm95_minipro/rfm95w/RFM95W-868S2.lib)(options "")(descr ""))
+  (lib (name LMS8117AMP-3.3)(type Legacy)(uri /home/akirasan/Documentos/lora_pcb_rfm95/lora_node_rfm95_minipro/LMS8117AMP-3.3.lib)(options "")(descr ""))
+  (lib (name lora_node_rfm95_minipro-rescue)(type Legacy)(uri ${KIPRJMOD}/lora_node_rfm95_minipro-rescue.lib)(options "")(descr ""))
+)
