@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ARD-PRO-MINI-5
+D Development Boards & Kits - AVR PRO MINI (ARDUINO) 5V/16MHZ
+K
+F https://www.arduino.cc/en/Main/arduinoBoardProMini
+$ENDCMP
+#
+#End Doc Library
